@@ -1,35 +1,25 @@
 name: r-java-gee-environment
 channels:
   - conda-forge
-  - r
   - defaults
 dependencies:
   # Java setup
   - openjdk=11
   - maven
-  - ijava
 
   # R setup
   - r-base
   - r-essentials
   - r-tidyverse
-  - r-tmap
-  - r-devtools
-  - r-rgeos
-  - r-rgdal
   - r-ggplot2
 
   # Python setup
   - python>=3.8
-  - earthengine-api   # Google Earth Engine API
-  - requests          # HTTP requests library for Python
-  - pandas            # Data analysis in Python
-  - numpy             # Numerical computing in Python
-  - geemap            # GEE helper package for interactive maps
+  - earthengine-api  # Google Earth Engine API
+  - requests
+  - pandas
+  - numpy
 
   # Jupyter support
   - notebook
   - jupyterlab
-
-  # Optional: GEE Authentication Helper for Jupyter
-  - google-auth       # For handling Google authentication
