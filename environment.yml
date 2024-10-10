@@ -1,8 +1,15 @@
-channel:
+name: r-java-gee-environment
+channels:
   - r
   - arcgis
   - conda-forge
 dependencies:
+  # Java setup
+  - openjdk=11
+  - maven
+  - ijava
+
+  # R setup
   - r-base
   - r-essentials
   - r-tidyverse
@@ -11,3 +18,21 @@ dependencies:
   - r-rgeos
   - r-rgdal
   - r-ggplot2
+  
+  # Additional Jupyter support
+  - notebook
+  - jupyterlab
+
+  # Python dependencies for GEE and Colab
+  - python>=3.8
+  - earthengine-api   # Google Earth Engine API
+  - requests          # For handling HTTP requests
+  - pandas            # Data analysis in Python
+  - numpy             # Numerical computing in Python
+
+  # Additional libraries for GEE
+  - geemap            # Simplifies working with GEE in Python (uses folium for interactive maps)
+
+  # Optional: GEE Authentication Helper for Jupyter
+  - google-auth       # For handling Google authentication
+
